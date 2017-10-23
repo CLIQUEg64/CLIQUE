@@ -1,13 +1,22 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('contacts').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('contacts').insert([
+        {id: 1,
+					 name: 'Willis Kirkhope',
+					 company: 'Alpine Colorado',
+					 position: 'CEO',
+					 skills: 'really really strong',
+					 meeting date: '10/23/2017',
+					 familiarity: 'like a brother to me',
+					 notes: 'looking for developers to build his personal site and training platforms',
+					 linkedin: 'www.linkedin.com/someguy',
+					 email: 'wkirkhope@alpineco.com',
+					 user_id: 1
+				 },
       ]);
     });
 };
