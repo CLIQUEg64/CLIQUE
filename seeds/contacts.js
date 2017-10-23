@@ -9,10 +9,10 @@ exports.seed = function(knex, Promise) {
         company: 'Alpine Colorado',
         position: 'CEO',
         skills: 'really really strong',
-        meeting date: '10/23/2017',
+        dateMet: '10/23/2017',
         familiarity: 'like a brother to me',
         notes: 'looking for developers to build his personal site and training platforms',
-        linkedin: 'www.linkedin.com/someguy',
+        linkedinURL: 'www.linkedin.com/someguy',
         email: 'wkirkhope@alpineco.com',
         user_id: 1
       }, ]);
