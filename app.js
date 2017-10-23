@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const bodyParser = require('body-parser')
+const queries = require('./db/queries')
 
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
