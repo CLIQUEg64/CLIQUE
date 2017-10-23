@@ -11,6 +11,11 @@ app.use(bodyParser.json())
 app.get('/', function (req, res) {
   res.render('index');
 })
+app.get('/login', (req, res) => {
+	res.render('login.hbs')
+})
+
+
 
 app.listen(port, () => {
 	console.log(`listening at ${port}`);
