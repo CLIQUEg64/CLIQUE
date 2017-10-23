@@ -1,15 +1,17 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 const bodyParser = require('body-parser')
 const queries = require('./db/queries')
 
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
 app.use(bodyParser.json())
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
   res.render('index');
 })
 app.get('/login', (req, res) => {
@@ -24,5 +26,5 @@ app.post('/', (req, res)=>{
 })
 
 app.listen(port, () => {
-	console.log(`listening at ${port}`);
+  console.log(`listening at ${port}`);
 })
