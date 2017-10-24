@@ -22,11 +22,12 @@ function generateRandomString() {
 }
 
 function getLogin() {
-  return db.select().from('users')
+  return db.select('*').from('users')
 }
 
 
 module.exports = {
   login,
-  createUser
+  createUser,
+  getLogin
 }
