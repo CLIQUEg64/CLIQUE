@@ -24,16 +24,41 @@ h2 {
 }
 
 .sidexside {
+	/*text-align: center;*/
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .create {
+	display: flex;
+	flex-direction: column;
 	/*border-right: 5px solid black;*/
-	height: 500px;
+	height: 600px;
 	width: 300px;
 }
-.login {
-	padding-left: 500px;
+.myLogin {
+	display: flex;
+	flex-direction: column;
+	justify-content:center ;
+	padding-left: 300px;
 	border-left: 5px solid black;
 }
+
+/*.cSubmit, .lSubmit {
+  color: darkslategray;
+  padding: 10px 5px 10px 5px;
+  border-radius: 7px;
+  background-color: #f6f6f6;
+  border: 0 none darkgrey;
+  transition: 0.3s;
+  width: 20%;
+  font-size: 1.2em;
+}
+
+.cSubmit:hover {
+  color: #f6f6f6;
+  padding: 10px 5px 10px 5px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  border: 2px solid lightgrey;
+  transform: scale(0.95);*/
