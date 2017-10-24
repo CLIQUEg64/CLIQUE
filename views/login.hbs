@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
-	<head>
+		<head>
 		<meta charset="utf-8">
 		<title>Clique - Log In Now</title>
+		<link rel="icon" type="image/png" href="images/favicon.ico">
 		<link rel="stylesheet" href="/styles.css">
-		<link rel='stylesheet' href="/login.css">
+		<!-- <link rel='stylesheet' href="/login.css"> -->
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<!--<![endif]-->
+		<!--[if lte IE 9]>
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-core.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-type.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-ui.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-anim.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-ie.css">
+		<![endif]-->
 	</head>
 	<body>
 		<header>
-			<!-- insert logo here -->
+			<div class="row double-padded">
+				<a href="/"><img src="images/clique-logo-horizontal.png"></a>
+			</div>
 		</header>
-		<section class="sidexside">
-			<!-- container to allow flexing of the create/login sections of the page -->
-			<div class="create">
-				<!-- forms in this div are related to creating an account -->
+		<main>
+			<div class="row">
+				<div class="one half padded">
 				<h2>Create Your Account Now!</h2>
 				<form action="/users" method="post">
+<<<<<<< HEAD
 					<input type="email" value="dave@gmail.com" name="email" placeholder="Email">
 					<input type="text"  value="google" name="company" placeholder="Company">
 					<input type="text" value="dave" name="name" placeholder="Name">
@@ -27,14 +40,35 @@
 			</div>
 			<div class="myLogin">
 				<!-- forms in this div are related to logging in -->
+=======
+					<fieldset class="center">
+						<input type="email" name="email" placeholder="Email">
+						<input type="text" name="company" placeholder="Company">
+						<input type="text" name="name" placeholder="Name">
+						<input type="text" name="position" placeholder="Position">
+						<input type="text" name="skills" placeholder="Skills">
+						<button>Create An Account</button>
+					</fieldset>
+				</form>
+				</div>
+				<div class="one half padded">
+>>>>>>> dcca9c3ac83b1c8f17a566cc0e2abc17847a12fc
 				<h2>Login to Your Account!</h2>
 				<form class="code" action="/" method="post">
-				<input type="text" name="lEmail" placeholder="Enter Email">
-				<input type="text" name="code" placeholder="Enter Code">
-				<button>LOGIN</button>
-			</form>
+					<fieldset class="center">
+						<input type="text" name="lEmail" placeholder="Enter Email">
+						<input type="text" name="code" placeholder="Enter Code">
+						<button>LOGIN</button>
+					</fieldset>
+				</form>
+				</div>
 			</div>
-		</section>
-<footer><small>&#169 2017 CLIQUEg64</small></footer>
+		</main>
+		<footer>
+      <div class="row"><small>	&copy; 2017 Clique. g64. All Rights Reserved.</small>
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://groundworkcss.github.io/groundwork/js/libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://groundworkcss.github.io/groundwork/js/groundwork.all.js"></script>
 	</body>
 </html>
