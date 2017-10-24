@@ -32,11 +32,13 @@ app.post('/', (req, res) => {
     })
 })
 app.post('/users', (req, res) => {
+  console.log(req.body);
   queries.createUser(req.body)
     .then(user => res.status(201).json(user))
     .catch(err => res.status(500).send(err))
 
 })
+
 app.get('/users', (req, res) => {
   queries.getLogin()
     .then(user => res.json(user))
