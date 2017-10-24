@@ -22,7 +22,7 @@ function generateRandomString() {
 }
 
 function getLogin() {
-  return db.select().from('users')
+  return db.select('*').from('users')
 }
 
 
