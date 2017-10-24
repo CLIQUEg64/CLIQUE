@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Clique - Log In Now</title>
-		<link rel='stylesheet' href='/styles.css'>
+		<link rel="stylesheet" href="/styles.css">
+		<link rel='stylesheet' href="/login.css">
 	</head>
 	<body>
 		<header>
@@ -13,22 +14,26 @@
 			<!-- container to allow flexing of the create/login sections of the page -->
 			<div class="create">
 				<!-- forms in this div are related to creating an account -->
+				<h2>Create Your Account Now!</h2>
+				<form action="/users" method="post">
 				<input type="email" name="email" placeholder="Email">
 				<input type="text" name="company" placeholder="Company">
 				<input type="text" name="name" placeholder="Name">
-				<input type="text" name="Position" placeholder="Position">
+				<input type="text" name="position" placeholder="Position">
 				<input type="text" name="skills" placeholder="Skills">
-				<button name="cSubmit"> CREATE AN ACCOUNT </button>
+				<button> CREATE AN ACCOUNT </button>
+			</form>
 			</div>
 			<div class="myLogin">
 				<!-- forms in this div are related to logging in -->
-				<input type="text" name="lEmail" placeholder="Enter Email">
+				<h2>Login to Your Account!</h2>
 				<form class="code" action="/" method="post">
+				<input type="text" name="lEmail" placeholder="Enter Email">
 				<input type="text" name="code" placeholder="Enter Code">
-				<button name="lSubmit">LOGIN</button>
+				<button>LOGIN</button>
 			</form>
 			</div>
 		</section>
-<footer> &copy Clique 2017 </footer>
+<footer><small>&#169 2017 CLIQUEg64</small></footer>
 	</body>
 </html>
