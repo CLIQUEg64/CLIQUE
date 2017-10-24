@@ -21,9 +21,9 @@ function generateRandomString() {
   return code;
 }
 
-// function getLogin() {
-//   return db.select().from('users')
-// }
+function getLogin() {
+  return db.select().from('users')
+}
 
 
 module.exports = {
