@@ -18,7 +18,10 @@ app.get('/', function(req, res) {
   res.render('index');
 })
 app.get('/login', (req, res) => {
-  res.render('login.hbs')
+  res.render('login')
+})
+app.get('/homepage', (req, res) => {
+  res.render('homepage')
 })
 
 app.post('/', (req, res) => {
