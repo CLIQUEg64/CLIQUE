@@ -1,9 +1,8 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 const port = process.env.PORT || 3000
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const queries = require('./db/queries');
-
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
