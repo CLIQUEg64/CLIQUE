@@ -31,21 +31,14 @@ app.post('/', (req, res) => {
       console.log(req.body.code)
     })
 })
-<<<<<<< HEAD
-app.post('/', (req, res) => {
-=======
 app.post('/users', (req, res) => {
->>>>>>> 958bb3238d3b3228f9e87f6badef8ebd8557f9be
   queries.createUser(req.body)
     .then(user => res.status(201).json(user))
     .catch(err => res.status(500).send(err))
 
 })
-<<<<<<< HEAD
-app.get('/', (req, res) => {
-=======
+
 app.get('/users', (req, res) => {
->>>>>>> 958bb3238d3b3228f9e87f6badef8ebd8557f9be
   queries.getLogin()
     .then(user => res.json(user))
 })
