@@ -28,5 +28,6 @@ function getLogin() {
 
 module.exports = {
   login,
-  createUser
+  createUser,
+  getLogin
 }
