@@ -21,9 +21,13 @@ app.get('/login', (req, res) => {
 app.post('/', (req, res)=>{
 	queries.login(req.body.code)
 	.then(user => {
-		res.redirect('/homepage/' + user[1].id)
+		res.redirect('/homepage/' + user[0].id)
 		console.log(req.body.code)
 	})
+})
+
+app.get('/homepage/:id', (req, res) => {
+	res.render('homepage')
 })
 
 app.listen(port, () => {
