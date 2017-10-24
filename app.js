@@ -31,16 +31,16 @@ app.post('/', (req, res) => {
       console.log(req.body.code)
     })
 })
-// app.post('/users', (req, res) => {
-//   queries.createUser(req.body)
-//     .then(user => res.status(201).json(user))
-//     .catch(err => res.status(500).send(err))
-//
-// })
-// app.get('/users', (req, res) => {
-//   queries.getLogin()
-//     .then(user => res.json(user))
-// })
+app.post('/users', (req, res) => {
+  queries.createUser(req.body)
+    .then(user => res.status(201).json(user))
+    .catch(err => res.status(500).send(err))
+
+})
+app.get('/users', (req, res) => {
+  queries.getLogin()
+    .then(user => res.json(user))
+})
 
 app.get('/homepage/:id', (req, res) => {
   res.render('homepage')
