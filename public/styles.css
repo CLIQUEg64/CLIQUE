@@ -12,17 +12,28 @@ main {
   align-items: center;
 }
 
-footer {
-  color:#FFF;
-  margin: 2% 0 0 0 !important;
-  text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  color: #1178B2;
 }
 
-h1 {
-  color: #1178B2;
+p {
+  color:#FFF;
 }
 
 a {
   text-decoration: none;
   color:#FFF;
+}
+
+fieldset {
+  background-color: #999 !important;
+  width: 375px !important;
+  border: #ccc !important;
+
+}
+
+footer {
+  color:#FFF;
+  margin: 2% 0 0 0 !important;
+  text-align: center;
 }
