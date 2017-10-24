@@ -27,6 +27,7 @@ a {
   text-decoration: none;
   color: darkslategray;
 }
+
 .login, .linkedin {
   color: darkslategray;
   padding: 10px 5px 10px 5px;
@@ -59,5 +60,5 @@ a {
   border-radius: 5px;
   background-color: white;
   border: 0 none lightgrey;
-  transform:scale(0.95);
+  transform: scale(0.95);
 }
