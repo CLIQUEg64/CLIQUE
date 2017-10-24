@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 app.get('/', function(req, res) {
   res.render('index');
 })
+
 app.get('/login', (req, res) => {
   res.render('login')
 })
@@ -34,10 +35,14 @@ app.post('/', (req, res) => {
 
 app.post('/users', (req, res) => {
   console.log(req.body);
+  var code = req.body.code;
   queries.createUser(req.body)
-    .then(user => res.status(201).json(user))
-    .catch(err => res.status(500).send(err))
-})
+  .then(user => {
+    res.redirect(`/homepage?code=${code}`)
+    //need to find a way to pass user: user[0] object to the homepage route and so we can access the object in homepage.hbs
+  }) 
+});
+
 
 app.get('/users', (req, res) => {
   queries.getLogin()

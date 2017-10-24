@@ -16,12 +16,13 @@
 				<!-- forms in this div are related to creating an account -->
 				<h2>Create Your Account Now!</h2>
 				<form action="/users" method="post">
-				<input type="email" name="email" placeholder="Email">
-				<input type="text" name="company" placeholder="Company">
-				<input type="text" name="name" placeholder="Name">
-				<input type="text" name="position" placeholder="Position">
-				<input type="text" name="skills" placeholder="Skills">
-				<button> CREATE AN ACCOUNT </button>
+					<input type="email" value="dave@gmail.com" name="email" placeholder="Email">
+					<input type="text"  value="google" name="company" placeholder="Company">
+					<input type="text" value="dave" name="name" placeholder="Name">
+					<input type="text" value="worker" name="position" placeholder="Position">
+					<input type="text" name="skills" value="none" placeholder="Skills">
+					<button> CREATE AN ACCOUNT </button>
+					<p>{{this.code}}</p>
 			</form>
 			</div>
 			<div class="myLogin">
