@@ -32,7 +32,8 @@ h2 {
 .create {
 	display: flex;
 	flex-direction: column;
-	/*border-right: 5px solid black;*/
+	justify-content: center;
+	
 	height: 600px;
 	width: 300px;
 }
