@@ -33,15 +33,17 @@ app.post('/', (req, res) => {
     })
 })
 
-app.post('/users', (req, res) => {
+app.post('/homepage', (req, res) => {
   console.log(req.body);
   var code = req.body.code;
   queries.createUser(req.body)
-  .then(user => {
-    res.redirect(`/homepage?code=${code}`)
+  .then(user => { console.log(user);
+    res.render('homepage', { user: user[0] })
+    // res.redirect(`/homepage/?code=${user[0].code}`)
     //need to find a way to pass user: user[0] object to the homepage route and so we can access the object in homepage.hbs
   }) 
 });
+
 
 
 app.get('/users', (req, res) => {

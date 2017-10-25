@@ -1,7 +1,7 @@
 const db = require('./connections')
 
 function login(code) {
-  return db('users').select().where('code', code)
+  return db('users').select().where('code', code).returning(['id', 'code'])
 }
 
 function createUser(user) {
