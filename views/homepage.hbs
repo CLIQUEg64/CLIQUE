@@ -9,12 +9,12 @@
 		<header>
 			<!-- We are not sure if this should be a link to the homepage or not -->
 			<img src="images/clique-logo-horizontal.png" alt="Homepage">
+			<button><a href='/'>Log Out</a></button>
 		</header>
 
-		{{#if show.code}}
-			{{> code}}
-		<h2>Your code is {{user.code}}, save this for the next time you login.</h2>
-		{{/if}}
+
+		<!-- <h2>Your code is {{user.code}}, save this for the next time you login.</h2> -->
+
 
 		<main>
 			<div class="personalInfo">
@@ -22,6 +22,7 @@
 				<ul>
 					<li>Name: {{user.name}}</li>
 					<li>Email: {{user.email}}</li>
+					<li>Password: {{user.code}}</li>
 					<li>Company: {{user.company}}</li>
 					<li>Position: {{user.position}}</li>
 					<li>Skills: {{user.skills}}</li>
