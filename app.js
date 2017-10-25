@@ -26,18 +26,10 @@ app.get('/homepage', (req, res) => {
 })
 
 app.get('/webdev', (req, res) => {
-<<<<<<< HEAD
-	queries.getUsers()
-	.then(users => {
-  res.render('webdev', {users: users});
-	console.log(users);
-	})
-=======
   queries.getUsers()
     .then(users => { console.log(users)
       res.render('webdev', {users: users} )
     })
->>>>>>> eda5394f650e789484b7ed149225b9349e1bc8db
 })
 
 app.post('/', (req, res) => {

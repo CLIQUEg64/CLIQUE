@@ -22,15 +22,6 @@ function generateRandomString() {
 }
 
 function getUsers() {
-<<<<<<< HEAD
-	return db('users').select().returning(['name', 'email'])
-}
-
-module.exports = {
-  login,
-  createUser,
-	getUsers
-=======
   return db.select('*').from('users').returning(['name', 'email', 'company', 'position', 'skills'])
 }
 
@@ -42,5 +33,4 @@ module.exports = {
   createUser,
   getUsers
 
->>>>>>> eda5394f650e789484b7ed149225b9349e1bc8db
 }
