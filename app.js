@@ -25,6 +25,10 @@ app.get('/homepage', (req, res) => {
   res.render('homepage')
 })
 
+app.get('/webdev', function(req, res) {
+  res.render('webdev');
+})
+
 app.post('/', (req, res) => {
   queries.login(req.body.code)
     .then(user => {

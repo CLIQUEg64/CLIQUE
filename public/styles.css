@@ -1,6 +1,5 @@
 body {
   background-color: #222 !important;
-  font-family: arial, sans-serif;
 }
 
 main {
@@ -10,14 +9,29 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Open Sans', arial, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #0085b0;
+  font-family: 'Open Sans', arial, sans-serif !important;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700 !important;
+}
+
+h5.hometag {
+  color: #FFF !important;
+}
+
+h5, h6 {
+  font-weight:400 !important;
 }
 
 p {
   color:#FFF;
+  font-family: 'Open Sans', arial, sans-serif !important;
 }
 
 a {
@@ -25,11 +39,48 @@ a {
   color:#FFF;
 }
 
+p.tagline {
+  margin-top: 8.5vh !important;
+  text-align: left;
+  font-size: 2.125vh;
+  letter-spacing: 1px;
+}
+
+p.logintag {
+  font-size: 2.125vh;
+  letter-spacing: 1px;
+  padding-left:25vh;
+  margin-top: -5px !imporant;
+}
+
+#logo {
+  padding-left: 5.25vh;
+}
+
+@media only screen and (max-width: 767px) {
+    p.tagline {
+        margin-top: 0 !important;
+        padding-left: 0 !important;
+        text-align: center!important;
+
+    }
+
+    #logo {
+      text-align: center !important;
+      padding-right: 3.25vh;
+      padding-left: 0;
+    }
+}
+
 fieldset {
   background-color: #999 !important;
-  width: 375px !important;
+  width: 51vh !important;
   border: #ccc !important;
 
+}
+
+form > fieldset > button {
+  margin-top: 12px;
 }
 
 footer {
