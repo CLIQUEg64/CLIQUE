@@ -12,30 +12,26 @@
 			<button><a href='/'>Log Out</a></button>
 		</header>
 
-
-		<h2>Your code is {{user.code}}, save this for the next time you login.</h2>
-
-
-		<main>
-			<div class="personalInfo">
-				<h2>Personal Info: </h2>
-				<ul>
-					<li>Name: {{user.name}}</li>
-					<li>Email: {{user.email}}</li>
-					<li>Password: {{user.code}}</li>
-					<li>Company: {{user.company}}</li>
-					<li>Position: {{user.position}}</li>
-					<li>Skills: {{user.skills}}</li>
-				</ul>
-			</div>
-			<!-- The cliques should be to the right of the personal info-->
-			<div class="myCliques">
-				<h2>My Cliques: </h2>
+			<main>
+				<div class="personalInfo">
+					<h2>Personal Info: </h2>
 					<ul>
-						<li><a href="/webdev">Web Dev</a></li>
+						<li>Name: {{user.name}}</li>
+						<li>Email: {{user.email}}</li>
+						<li>Password: {{user.code}}</li>
+						<li>Company: {{user.company}}</li>
+						<li>Position: {{user.position}}</li>
+						<li>Skills: {{user.skills}}</li>
 					</ul>
-			</div>
-		</main>
+				</div>
+			<!-- The cliques should be to the right of the personal info-->
+				<div class="myCliques">
+					<h2>My Cliques: </h2>
+						<ul>
+							<li><a href="/webdev">Web Dev</a></li>
+						</ul>
+					</div>
+				</main>
 
 
 
