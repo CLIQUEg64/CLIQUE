@@ -49,8 +49,8 @@ p.tagline {
 p.logintag {
   font-size: 2.125vh;
   letter-spacing: 1px;
-  padding-left: 25vh;
-  margin-top: -5px !imporant;
+  padding-left:25vh;
+  margin-top: -5px !important;
 }
 
 #logo {
