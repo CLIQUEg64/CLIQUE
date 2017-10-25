@@ -30,9 +30,10 @@ app.get('/webdev', function(req, res) {
 })
 
 app.post('/', (req, res) => {
+  var id = req.body.id
   queries.login(req.body.code)
     .then(user => {
-      res.redirect('/homepage/' + user[0].id)
+      res.render('homepage', {user: user[0]})
       console.log(req.body.code)
     })
 })
