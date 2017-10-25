@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Web Dev Clique</title>
 	</head>
 	<body>
 		<header>
@@ -13,15 +13,30 @@
 		<section class="accordionTest">
 			<div class="users">
 				{{#each users}}
-				<ul>
-					<li>{{this.name}}</li>
-					<li>{{this.company}}</li>
-					<li>{{this.position}}</li>
-					<li>{{this.skills}}</li>
-					<li>{{this.email}}</li>
-				</ul>
+				<div>
+
+					<p>{{this.name}}</p>
+					<p>{{this.company}}</p>
+					<p>{{this.position}}</p>
+					<p>{{this.skills}}</p>
+					<p>{{this.email}}</p>
+					<!-- <form action='/contacts' method="get"><button>Get Contacts</button></form> -->
+				</div>
 				{{/each}}
 
+				{{#each contacts}}
+				<div>
+					<p>{{this.name}}</p>
+					<p>{{this.company}}</p>
+					<p>{{this.position}}</p>
+					<p>{{this.skills}}</p>
+					<p>{{this.email}}</p>
+					<p>{{this.dateMet}}</p>
+					<p>{{this.familiarity}}</p>
+					<p>{{this.notes}}</p>
+					<p>{{this.linkedinURL}}</p>
+				</div>
+				{{/each}}
 			</div>
 
 	</body>

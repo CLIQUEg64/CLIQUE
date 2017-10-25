@@ -27,9 +27,17 @@ app.get('/homepage', (req, res) => {
 
 app.get('/webdev', (req, res) => {
   queries.getUsers()
-    .then(users => { console.log(users)
+    .then(users => {
+      console.log(users)
       res.render('webdev', {users: users} )
     })
+})
+
+app.get('/contacts', (req, res) => {
+  queries.getContacts()
+  .then(contacts => { console.log(contacts)
+  res.render('webdev', {contacts:contacts})
+  })
 })
 
 app.post('/', (req, res) => {
@@ -37,7 +45,7 @@ app.post('/', (req, res) => {
   queries.login(req.body.code)
     .then(user => {
       res.render('homepage', {user: user[0]})
-      console.log(req.body.code)
+      // console.log(req.body.code)
     })
 })
 
