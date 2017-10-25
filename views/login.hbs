@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="/styles.css">
 		<!-- <link rel='stylesheet' href="/login.css"> -->
 		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
 		<!--<![endif]-->
 		<!--[if lte IE 9]>
 		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-core.css">
@@ -19,14 +19,18 @@
 	</head>
 	<body>
 		<header>
-			<div class="row double-padded">
-				<a href="/"><img src="images/clique-logo-horizontal.png"></a>
+			<div class="row">
+				<div id="logo" class="one half double-padded pull-none">
+					<a href="/"><img src="images/clique-logo-horizontal.png"></a>
+				</div>
+				<div class="one half">
+					<p class="tagline">Safely Share Contacts with your Clique.</p>
 			</div>
 		</header>
 		<main>
 			<div class="row">
 				<div class="one half padded">
-				<h2>Create Your Account Now!</h2>
+				<h2 class="login">Create Your Account Now</h2>
 				<form action="/users" method="post">
 					<fieldset class="center">
 						<input type="email" name="email" placeholder="Email">
@@ -39,12 +43,12 @@
 				</form>
 				</div>
 				<div class="one half padded">
-				<h2>Login to Your Account!</h2>
+				<h2 class="login">Login to Your Account</h2>
 				<form class="code" action="/" method="post">
 					<fieldset class="center">
 						<input type="text" name="lEmail" placeholder="Enter Email">
 						<input type="text" name="code" placeholder="Enter Code">
-						<button>LOGIN</button>
+						<button>Login</button>
 					</fieldset>
 				</form>
 				</div>

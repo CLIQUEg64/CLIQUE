@@ -40,7 +40,7 @@ app.post('/users', (req, res) => {
   .then(user => {
     res.redirect(`/homepage?code=${code}`)
     //need to find a way to pass user: user[0] object to the homepage route and so we can access the object in homepage.hbs
-  }) 
+  })
 });
 
 
