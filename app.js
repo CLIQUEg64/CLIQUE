@@ -41,11 +41,10 @@ app.get('/contacts', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  var id = req.body.id
   queries.login(req.body.code)
     .then(user => {
       res.render('homepage', {user: user[0]})
-      // console.log(req.body.code)
+			// console.log({user: user[0]});
     })
 })
 
