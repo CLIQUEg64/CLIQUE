@@ -12,7 +12,15 @@
 		<!-- <img src="" alt=""> -->
 		<section class="accordionTest">
 			<div class="users">
-				
+				{{#each users}}
+				<ul>
+					<li>{{this.name}}</li>
+					<li>{{this.company}}</li>
+					<li>{{this.position}}</li>
+					<li>{{this.skills}}</li>
+					<li>{{this.email}}</li>
+				</ul>
+				{{/each}}
 
 			</div>
 

@@ -21,13 +21,16 @@ function generateRandomString() {
   return code;
 }
 
-function getLogin() {
-  return db.select('*').from('users')
+function getUsers() {
+  return db.select('*').from('users').returning(['name', 'email', 'company', 'position', 'skills'])
 }
+
+
 
 
 module.exports = {
   login,
   createUser,
-  getLogin
+  getUsers
+
 }

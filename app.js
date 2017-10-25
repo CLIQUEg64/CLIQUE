@@ -25,8 +25,11 @@ app.get('/homepage', (req, res) => {
   res.render('homepage')
 })
 
-app.get('/webdev', function(req, res) {
-  res.render('webdev');
+app.get('/webdev', (req, res) => {
+  queries.getUsers()
+    .then(users => { console.log(users)
+      res.render('webdev', {users: users} )
+    })
 })
 
 app.post('/', (req, res) => {
@@ -51,15 +54,6 @@ app.post('/homepage', (req, res) => {
 });
 
 
-
-app.get('/users', (req, res) => {
-  queries.getLogin()
-    .then(user => res.json(user))
-})
-
-app.get('/homepage/:id', (req, res) => {
-  res.render('homepage')
-})
 
 app.listen(port, () => {
   console.log(`listening at ${port}`);
