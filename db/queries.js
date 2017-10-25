@@ -8,7 +8,7 @@ function createUser(user) {
   const code = generateRandomString()
 
   user.code = code
-  return db('users').insert(user).returning(['id', 'code'])
+  return db('users').insert(user).returning(['id', 'code', 'name', 'email','company', 'position', 'skills'])
 }
 
 function generateRandomString() {
