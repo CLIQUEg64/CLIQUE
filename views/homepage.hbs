@@ -2,16 +2,39 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Welcome To Click</title>
+		<title>Welcome To Clique</title>
 		<link rel="stylesheet" href="/styles.css">
 	</head>
 	<body>
-		<h1>Hello world!</h1>
-		<h2>Your code is {{user.code}}, save this for the next time you login.</h2>
-		<h2>My Cliques</h2>
-			<ul>
-				<li><a href="/webdev">Web Dev </a></li>
-			</ul>
+		<header>
+			<!-- We are not sure if this should be a link to the homepage or not -->
+			<img src="images/clique-logo-horizontal.png" alt="Homepage">
+			<button><a href='/'>Log Out</a></button>
+		</header>
+
+			<main>
+				<div class="personalInfo">
+					<h2>Personal Info: </h2>
+					<ul>
+						<li>Name: {{user.name}}</li>
+						<li>Email: {{user.email}}</li>
+						<li>Password: {{user.code}}</li>
+						<li>Company: {{user.company}}</li>
+						<li>Position: {{user.position}}</li>
+						<li>Skills: {{user.skills}}</li>
+					</ul>
+				</div>
+			<!-- The cliques should be to the right of the personal info-->
+				<div class="myCliques">
+					<h2>My Cliques: </h2>
+						<ul>
+							<li><a href="/webdev">Web Dev</a></li>
+						</ul>
+					</div>
+				</main>
+
+
+
 		<footer><small>&#169 2017 CLIQUEg64</small></footer>
 	</body>
 </html>

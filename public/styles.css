@@ -26,17 +26,17 @@ h5.hometag {
 }
 
 h5, h6 {
-  font-weight:400 !important;
+  font-weight: 400 !important;
 }
 
 p {
-  color:#FFF;
+  color: #FFF;
   font-family: 'Open Sans', arial, sans-serif !important;
 }
 
 a {
   text-decoration: none;
-  color:#FFF;
+  color: #FFF;
 }
 
 p.tagline {
@@ -58,33 +58,30 @@ p.logintag {
 }
 
 @media only screen and (max-width: 767px) {
-    p.tagline {
-        margin-top: 0 !important;
-        padding-left: 0 !important;
-        text-align: center!important;
-
-    }
-
-    #logo {
-      text-align: center !important;
-      padding-right: 3.25vh;
-      padding-left: 0;
-    }
+  p.tagline {
+    margin-top: 0 !important;
+    padding-left: 0 !important;
+    text-align: center!important;
+  }
+  #logo {
+    text-align: center !important;
+    padding-right: 3.25vh;
+    padding-left: 0;
+  }
 }
 
 fieldset {
   background-color: #999 !important;
   width: 51vh !important;
   border: #ccc !important;
-
 }
 
-form > fieldset > button {
+form>fieldset>button {
   margin-top: 12px;
 }
 
 footer {
-  color:#FFF;
+  color: #FFF;
   margin: 2% 0 0 0 !important;
   text-align: center;
 }
