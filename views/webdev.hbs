@@ -10,10 +10,13 @@
 			<!-- span for logout -->
 		</header>
 		<!-- <img src="" alt=""> -->
+		<h1>Clique Members:</h1>
 		<section class="accordionTest">
 			<div class="users">
-				
-
+					{{users.name}}
+				{{#each users.name}}
+			<li>{{this}}</li>
+		{{/each}}
 			</div>
 
 	</body>
