@@ -2,28 +2,52 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Web Dev - Clique</title>
+		<link rel="icon" type="image/png" href="favicon.ico">
+		<link rel="stylesheet" href="/styles.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+		<!--<![endif]-->
+		<!--[if lte IE 9]>
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-core.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-type.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-ui.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-anim.css">
+		<link type="text/css" rel="stylesheet" href="https://groundworkcss.github.io/groundwork/css/groundwork-ie.css">
+		<![endif]-->
 	</head>
 	<body>
 		<header>
-			<!--span for logo?  -->
-			<!-- span for logout -->
-		</header>
-		<!-- <img src="" alt=""> -->
-		<h1>Clique Members:</h1>
-		<section class="accordionTest">
-			<div class="users">
-				{{#each users}}
-				<ul>
-					<li>{{this.name}}</li>
-					<li>{{this.company}}</li>
-					<li>{{this.position}}</li>
-					<li>{{this.skills}}</li>
-					<li>{{this.email}}</li>
-				</ul>
-				{{/each}}
-
+			<div class="row">
+			  <div id="logo" class="one half double-padded align-left">
+			    <a href="/"><img src="images/clique-logo-horizontal.png" alt="Homepage"></a>
+			  </div>
+			  <div id="logout" class="one half">
+			    <a href="/" class="button blue round">Logout <i class="icon-signout"></i></a>
 			</div>
-
+		</header>
+		<main>
+			<div class="row double-padded">
+					<h2>Clique Members:</h2>
+					<section class="accordionTest">
+						<div class="users">
+							{{#each users}}
+							<ul>
+								<li>{{this.name}}</li>
+								<li>{{this.company}}</li>
+								<li>{{this.position}}</li>
+								<li>{{this.skills}}</li>
+								<li>{{this.email}}</li>
+							</ul>
+							{{/each}}
+						</div>
+			</div>
+			<footer>
+	      <div class="row">
+					<small>&copy; 2017 Clique. g64. All Rights Reserved.</small>
+	      </div>
+	    </footer>
+	    <script type="text/javascript" src="https://groundworkcss.github.io/groundwork/js/libs/jquery-1.10.2.min.js"></script>
+	    <script type="text/javascript" src="https://groundworkcss.github.io/groundwork/js/groundwork.all.js"></script>
 	</body>
 </html>
