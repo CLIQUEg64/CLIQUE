@@ -8,7 +8,7 @@ function createUser(user) {
   const code = generateRandomString()
 
   user.code = code
-  return db('users').insert(user).returning(['id', 'code', 'name', 'email','company', 'position', 'skills'])
+  return db('users').insert(user).returning(['id', 'code', 'name', 'email', 'company', 'position', 'skills'])
 }
 
 function generateRandomString() {
@@ -22,23 +22,23 @@ function generateRandomString() {
 }
 
 function update(id, user) {
-	// Update a user where email matches user email
-	return db.table('users').update(user).where('id', id).returning(['id','name', 'email','company','position', 'skills','code']);
+  // Update a user where email matches user email
+  return db.table('users').update(user).where('id', id).returning(['id', 'name', 'email', 'company', 'position', 'skills', 'code']);
 }
 
 function getUsers() {
   return db.select('*').from('users').returning(['name', 'email', 'company', 'position', 'skills'])
 }
 
-function getContacts(users){
-	for (var i = 0; i < users.length; i++) {
-		console.log(users[i])
-		console.log(db.select('*').from('contacts').where('user_id', users[1].id))
-		return db.select().from('contacts')
-	}
+function getContacts(users) {
+  for (var i = 0; i < users.length; i++) {
+    console.log(users[i])
+    // console.log(db.select('*').from('contacts').where('user_id', users[1].id))
+    return db.select().from('contacts')
+  }
 }
 
-function removeUser(id){
+function removeUser(id) {
   return db.del().from('users').where('id', id);
 }
 

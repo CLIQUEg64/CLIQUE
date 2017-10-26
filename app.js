@@ -30,12 +30,14 @@ app.get('/webdev', (req, res) => {
   queries.getUsers()
     .then(users => {
       // console.log(users)
-			queries.getContacts(users)
-				.then(contacts => {
-					// console.log(users);
-      res.render('webdev', { users: users, contacts:contacts
-			})
-      })
+      queries.getContacts(users)
+        .then(contacts => {
+          // console.log(users);
+          res.render('webdev', {
+            users: users,
+            contacts: contacts
+          })
+        })
     })
 })
 
@@ -76,16 +78,26 @@ app.post('/homepage', (req, res) => {
 
 app.put('/:id', (req, res, next) => {
   console.log('Hello');
-	const id = req.params.id;
-	queries.update(id, req.body)
-  // .then(() => res.sendStatus(200))
-	// 	.catch(err => next(err))
-  // })
-		.then(user => { console.log(user)
-    res.render('homepage',{ user: user[0] })
-  })
-		.catch(err => next(err));
+  const id = req.params.id;
+  queries.update(id, req.body)
+    // .then(() => res.sendStatus(200))
+    // 	.catch(err => next(err))
+    // })
+    .then(user => {
+      console.log(user)
+      res.render('homepage', {
+        user: user[0]
+      })
+    })
+    .catch(err => next(err));
 });
+app.delete('/:id', (req, res, next) => {
+  const id = req.params.id;
+  queries.removeUser(id)
+    .then(user => {
+      res.redirect('/')
+    })
+})
 
 
 app.listen(port, () => {
