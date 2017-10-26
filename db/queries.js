@@ -21,8 +21,14 @@ function generateRandomString() {
   return code;
 }
 
+
+
 function getUsers() {
   return db.select('*').from('users').returning(['name', 'email', 'company', 'position', 'skills'])
+}
+
+function getContacts(){
+  return  db.select('*').from('contacts').returning(['name','company','position','skills','dateMet','familiarity','notes','linkedinURL','email','user_id'])
 }
 
 
@@ -31,6 +37,7 @@ function getUsers() {
 module.exports = {
   login,
   createUser,
-  getUsers
+  getUsers,
+  getContacts
 
 }
