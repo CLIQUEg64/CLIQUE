@@ -36,6 +36,29 @@
 						<p><span style="font-weight: bold;">Company:</span> {{user.company}}</p>
 						<p><span style="font-weight: bold;">Position:</span> {{user.position}}</p>
 						<p><span style="font-weight: bold;">Skills:</span> {{user.skills}}</p>
+						<button id='edit' class="round">Edit</button>
+				</div>
+				<div class="editUser">
+					<fieldset class="center">
+						<form method="post" action="/{{user.id}}?_method=PUT">
+							<h2>Edit Your Account Details</h2>
+							<label for='id'>ID:</label>
+							<input disabled type="number" value='{{user.id}}' name="id" placeholder="Do Not Change">
+							<label for='code'>Password:</label>
+							<input type="text" value='{{user.code}}' name="code" placeholder="">
+							<label for='email'>Email:</label>
+							<input type="email" value='{{user.email}}' name="email" placeholder="Email">
+							<label for="name">Name</label>
+							<input type="text" value='{{user.name}}' name="name" placeholder="Name">
+							<label for="company">Company</label>
+							<input type="text" value='{{user.company}}'name="company" placeholder="Company">
+							<label for="position">Position</label>
+							<input type="text" value='{{user.position}}' name="position" placeholder="Position">
+							<label for="skills">Skills</label>
+							<input type="text" value='{{user.skills}}' name="skills" placeholder="Skills">
+							<button class="round">Save</button>
+						</form>
+					</fieldset>
 				</div>
 				<div class="one half double-padded">
 					<h2>My Cliques:</h2>
@@ -59,6 +82,7 @@
 				<small>&copy; 2017 Clique. g64. All Rights Reserved.</small>
       </div>
     </footer>
+		<script src='/main.js'></script>
     <script type="text/javascript" src="https://groundworkcss.github.io/groundwork/js/libs/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="https://groundworkcss.github.io/groundwork/js/groundwork.all.js"></script>
 	</body>

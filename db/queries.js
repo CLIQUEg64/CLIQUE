@@ -21,7 +21,10 @@ function generateRandomString() {
   return code;
 }
 
-
+function update(id, user) {
+	// Update a user where email matches user email
+	return db.table('users').update(user).where('id', id).returning(['id','name', 'email','company','position', 'skills','code']);
+}
 
 function getUsers() {
   return db.select('*').from('users').returning(['name', 'email', 'company', 'position', 'skills'])
@@ -37,11 +40,11 @@ function getContacts(users){
 
 
 
-
 module.exports = {
   login,
   createUser,
   getUsers,
-  getContacts
+  getContacts,
+  update
 
 }

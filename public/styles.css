@@ -3,6 +3,7 @@ body {
 }
 
 main {
+  background-color: #222 !important;
   text-align: center;
   margin: 1% 0 0 0;
   display: flex;
@@ -59,6 +60,10 @@ ul, li {
   padding-right: 7vh;
 }
 
+.editUser {
+  display:none;
+}
+
 @media only screen and (max-width: 767px) {
   #logo {
     text-align: center !important;
@@ -82,8 +87,16 @@ form>fieldset>button {
   margin-top: 12px;
 }
 
+.quote {
+  padding-top: 3vh;
+  padding-bottom: 0;
+}
+
+.quote h4 {
+  font-size: 2vh;
+}
 footer {
   color: #FFF;
-  margin: 2% 0 0 0 !important;
+  margin: 1% 0 0 0 !important;
   text-align: center;
 }
