@@ -15,7 +15,7 @@ exports.seed = function(knex, Promise) {
         notes: 'looking for developers to build his personal site and training platforms',
         linkedinURL: 'www.linkedin.com/someguy',
         email: 'wkirkhope@alpineco.com',
-        user_id: 1
+        contactOf: 'Jake Robbins'
       },
 			{
 			id: 2,
@@ -28,7 +28,7 @@ exports.seed = function(knex, Promise) {
 			notes: 'looking for developers to build his personal site and training platforms',
 			linkedinURL: 'www.linkedin.com/someguy',
 			email: 'wkirkhope@alpineco.com',
-			user_id: 1
+			contactOf: 'Jake Robbins'
 		},
 	{
 	id: 3,
@@ -41,7 +41,7 @@ exports.seed = function(knex, Promise) {
 	notes: 'recruiting for startup expansion',
 	linkedinURL: 'www.linkedin.com/someguy',
 	email: 'wkirkhope@alpineco.com',
-	user_id: 2
+	contactOf: 'Landon Shields'
 },
 		]);
     });

@@ -11,7 +11,7 @@ exports.up = function(knex, Promise) {
       table.string('notes')
       table.string('linkedinURL')
       table.string('email')
-      table.integer('user_id')
+      table.string('contactOf')
 
     })
   ])

@@ -28,26 +28,28 @@
 		</header>
 		<main>
 			<div class="row double-padded">
+				<section class="accordionTest">
+					<div class="users">
 					<h2>WebDev Members:</h2>
-					<section class="accordionTest">
-						<div class="users">
 							{{#each users}}
 							<ul>
 								<button class= {{this.id}}><li>{{this.name}}</li> </button>
 							</ul>
 							{{/each}}
+						</div>
 							<div class="contactInfo">
-
-							</div>
+								<h2>WebDev Contacts:</h2>
 							{{#each contacts}}
 							<ul>
-								<li>{{this.name}}</li>
-								<li>{{this.company}}</li>
-								<li>{{this.position}}</li>
-								<li>{{this.user_id}}</li>
+								<li>Name: {{this.name}}</li>
+								<li>Company: {{this.company}}</li>
+								<li>Position: {{this.position}}</li>
+								<li>Notes: {{this.notes}}</li>
+								<li>Owned By: {{this.contactOf}}</li>
 							</ul>
 							{{/each}}
 						</div>
+					</section>
 			</div>
 			<footer>
 	      <div class="row">
