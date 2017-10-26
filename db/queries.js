@@ -38,12 +38,16 @@ function getContacts(users){
 }
 }
 
+function removeUser(id){
+  return db.del().from('users').where('id', id);
+}
+
 
 module.exports = {
   login,
   createUser,
   getUsers,
   getContacts,
-  update
-
+  update,
+  removeUser
 }

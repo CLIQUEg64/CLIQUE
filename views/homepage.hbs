@@ -75,7 +75,10 @@
 							<a href="#" class="button round">Join an Existing Clique <i class="icon-group"></i></a>
 						</div>
 						<div class="row double-padded">
-							<a href="#" class="button round red">Delete Profile <i class="icon-minus-sign"></i></a>
+							<form action="/{{user.id}}?_method=DELETE" method="post">
+								<button class="button round red">DELETE USER<i class="icon-minus-sign"></i></button>
+							</form>
+
 						</div>
 				</div>
 			</div>
