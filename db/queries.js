@@ -27,8 +27,12 @@ function getUsers() {
   return db.select('*').from('users').returning(['name', 'email', 'company', 'position', 'skills'])
 }
 
-function getContacts(){
-  return  db.select('*').from('contacts').returning(['name','company','position','skills','dateMet','familiarity','notes','linkedinURL','email','user_id'])
+function getContacts(users){
+	for (var i = 0; i <= users.length; i++) {
+		console.log(users[i])
+		return db.select('*').from('contacts').where('user_id', users[i].id)
+	// .returning(['name','company','position','skills','dateMet','familiarity','notes','linkedinURL','email','user_id'])
+}
 }
 
 

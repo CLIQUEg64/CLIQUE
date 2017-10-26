@@ -28,10 +28,10 @@ app.get('/homepage', (req, res) => {
 app.get('/webdev', (req, res) => {
   queries.getUsers()
     .then(users => {
-      console.log(users)
-			queries.getContacts()
+      // console.log(users)
+			queries.getContacts(users)
 				.then(contacts => {
-					console.log((contacts));
+					// console.log((contacts));
       res.render('webdev', { users: users, contacts:contacts
 			})
       })
