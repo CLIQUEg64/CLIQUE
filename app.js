@@ -3,6 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000
 const bodyParser = require('body-parser');
 const queries = require('./db/queries');
+const methodOverride = require('method-override')
 
 
 app.set('view engine', 'hbs');
@@ -11,7 +12,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 app.use(bodyParser.json())
-
+app.use(methodOverride("_method"))
 
 
 app.get('/', function(req, res) {
@@ -60,6 +61,18 @@ app.post('/homepage', (req, res) => {
   })
 });
 
+app.put('/:id', (req, res, next) => {
+  console.log('Hello');
+	const id = req.params.id;
+	queries.update(id, req.body)
+  // .then(() => res.sendStatus(200))
+	// 	.catch(err => next(err))
+  // })
+		.then(user => { console.log(user)
+    res.render('homepage',{ user: user[0] })
+  })
+		.catch(err => next(err));
+});
 
 
 app.listen(port, () => {
