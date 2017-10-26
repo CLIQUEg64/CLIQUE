@@ -28,16 +28,23 @@
 		</header>
 		<main>
 			<div class="row double-padded">
-					<h2>Clique Members:</h2>
+					<h2>WebDev Members:</h2>
 					<section class="accordionTest">
 						<div class="users">
 							{{#each users}}
 							<ul>
 								<li>{{this.name}}</li>
-								<li>{{this.company}}</li>
+								<!-- <li>{{this.company}}</li>
 								<li>{{this.position}}</li>
 								<li>{{this.skills}}</li>
-								<li>{{this.email}}</li>
+								<li>{{this.email}}</li> -->
+							</ul>
+							{{/each}}
+							{{#each contacts}}
+							<ul>
+								<li>{{this.name}}</li>
+								<li>{{this.company}}</li>
+								<li>{{this.position}}</li>
 							</ul>
 							{{/each}}
 						</div>

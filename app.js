@@ -30,22 +30,32 @@ app.get('/webdev', (req, res) => {
   queries.getUsers()
     .then(users => {
       console.log(users)
-      res.render('webdev', {users: users} )
+			queries.getContacts()
+				.then(contacts => {
+					console.log((contacts));
+      res.render('webdev', { users: users, contacts:contacts
+			})
+      })
     })
 })
 
 app.get('/contacts', (req, res) => {
   queries.getContacts()
-  .then(contacts => { console.log(contacts)
-  res.render('webdev', {contacts:contacts})
-  })
+    .then(contacts => {
+      console.log(contacts)
+      res.render('webdev', {
+        contacts: contacts
+      })
+    })
 })
 
 app.post('/', (req, res) => {
   queries.login(req.body.code)
     .then(user => {
-      res.render('homepage', {user: user[0]})
-			// console.log({user: user[0]});
+      res.render('homepage', {
+        user: user[0]
+      })
+      // console.log({user: user[0]});
     })
 })
 
@@ -54,11 +64,14 @@ app.post('/homepage', (req, res) => {
   console.log(req.body);
   var code = req.body.code;
   queries.createUser(req.body)
-  .then(user => { console.log(user);
-    res.render('homepage', { user: user[0] })
-    // res.redirect(`/homepage/?code=${user[0].code}`)
-    //need to find a way to pass user: user[0] object to the homepage route and so we can access the object in homepage.hbs
-  })
+    .then(user => {
+      console.log(user);
+      res.render('homepage', {
+        user: user[0]
+      })
+      // res.redirect(`/homepage/?code=${user[0].code}`)
+      //need to find a way to pass user: user[0] object to the homepage route and so we can access the object in homepage.hbs
+    })
 });
 
 app.put('/:id', (req, res, next) => {
