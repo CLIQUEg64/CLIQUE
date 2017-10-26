@@ -59,6 +59,11 @@
 							<button class="round">Save <i class="icon-save"></i></button>
 						</fieldset>
 					</form>
+					<div class="row double-padded">
+						<form action="/{{user.id}}?_method=DELETE" method="post">
+							<button class="button round red">DELETE USER<i class="icon-minus-sign"></i></button>
+						</form>
+					</div>	
 				</div>
 				<div class="one half">
 					<h2>My Cliques:</h2>
@@ -73,12 +78,6 @@
 						</div>
 						<div class="row padded">
 							<a href="#" class="button round">Join an Existing Clique <i class="icon-group"></i></a>
-						</div>
-						<div class="row double-padded">
-							<form action="/{{user.id}}?_method=DELETE" method="post">
-								<button class="button round red">DELETE USER<i class="icon-minus-sign"></i></button>
-							</form>
-
 						</div>
 				</div>
 			</div>
