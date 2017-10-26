@@ -36,12 +36,12 @@
 						<p><span style="font-weight: bold;">Company:</span> {{user.company}}</p>
 						<p><span style="font-weight: bold;">Position:</span> {{user.position}}</p>
 						<p><span style="font-weight: bold;">Skills:</span> {{user.skills}}</p>
-						<button id='edit' class="round">Edit</button>
+						<button id='edit' class="round">Edit <i class="icon-edit"></i></button>
 				</div>
-				<div class="editUser">
-					<fieldset class="center">
+				<div class="editUser row">
+					<h2>Edit Your Account Details</h2>
 						<form method="post" action="/{{user.id}}?_method=PUT">
-							<h2>Edit Your Account Details</h2>
+							<fieldset class="center">
 							<label for='id'>ID:</label>
 							<input disabled type="number" value='{{user.id}}' name="id" placeholder="Do Not Change">
 							<label for='code'>Password:</label>
@@ -56,9 +56,9 @@
 							<input type="text" value='{{user.position}}' name="position" placeholder="Position">
 							<label for="skills">Skills</label>
 							<input type="text" value='{{user.skills}}' name="skills" placeholder="Skills">
-							<button class="round">Save</button>
-						</form>
-					</fieldset>
+							<button class="round">Save <i class="icon-save"></i></button>
+						</fieldset>
+					</form>
 				</div>
 				<div class="one half double-padded">
 					<h2>My Cliques:</h2>

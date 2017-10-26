@@ -7,7 +7,7 @@ fetch('http://quotes.rest/qod.json')
 .then((response) => {
   return response.json()
   .then((quoteFromSite) => {
-console.log(quoteFromSite);
+
     var quoteOfTheDay = quoteFromSite.contents.quotes["0"].quote;
     var quoteAuthor = quoteFromSite.contents.quotes["0"].author;
 
