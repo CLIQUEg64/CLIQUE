@@ -59,7 +59,22 @@ ul, li {
   padding-top: 7vh;
   padding-right: 7vh;
 }
-
+#createacct {
+  width: 40%;
+  margin: 0 5%;
+}
+#loginacct {
+  width: 40%;
+  margin: 0 5%;
+}
+#info {
+  width: 40%;
+  margin: 0 5%;
+}
+#cliques {
+  width: 40%;
+  margin: 0 5%;
+}
 .editUser {
   display:none;
 }
@@ -75,11 +90,27 @@ ul, li {
     padding-right: 0;
     padding-bottom: 2vh;
   }
+  #createacct {
+    width: 100%;
+    margin: 0;
+  }
+  #loginacct {
+    width: 100%;
+    margin: 0;
+  }
+  #info {
+    width: 100%;
+    margin: 0;
+  }
+  #cliques {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 fieldset {
   background-color: #999 !important;
-  width: 51vh !important;
+  /*width: 49vh !important;*/
   border: #ccc !important;
 }
 
