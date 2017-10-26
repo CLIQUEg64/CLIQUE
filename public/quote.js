@@ -22,3 +22,4 @@ fetch('http://quotes.rest/quote/random.json', myInit)
           document.getElementsByTagName('P')[0].innerHTML = '"' + quoteRandom + '"';
           document.getElementsByTagName('H4')[0].innerHTML = quoteAuthor;
         })
+      })
