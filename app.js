@@ -29,8 +29,11 @@ app.get('/webdev', (req, res) => {
   queries.getUsers()
     .then(users => {
       console.log(users)
-      res.render('webdev', {
-        users: users
+			queries.getContacts()
+				.then(contacts => {
+					console.log((contacts));
+      res.render('webdev', { users: users, contacts:contacts
+			})
       })
     })
 })
