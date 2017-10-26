@@ -39,7 +39,6 @@ function getContacts(users){
 }
 
 
-
 module.exports = {
   login,
   createUser,
