@@ -31,12 +31,10 @@ function getUsers() {
 }
 
 function getContacts(users){
-	for (var i = 0; i <= users.length; i++) {
-		console.log(users[i])
-		return db.select('*').from('contacts').where('user_id', users[i].id)
-	// .returning(['name','company','position','skills','dateMet','familiarity','notes','linkedinURL','email','user_id'])
+		return db.select('*').from('contacts')
+
 }
-}
+
 
 
 module.exports = {
