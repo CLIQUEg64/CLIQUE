@@ -27,8 +27,8 @@
 			</div>
 		</header>
 		<main>
-			<div class="row double-padded">
-				<div id="info" class="one half double-padded">
+			<div class="row">
+				<div id="info" class="one half">
 					<h2>Personal Info:</h2>
 						<p><span style="font-weight: bold;">Name:</span>  {{user.name}}</p>
 						<p><span style="font-weight: bold;">Email:</span> {{user.email}}</p>
@@ -38,7 +38,7 @@
 						<p><span style="font-weight: bold;">Skills:</span> {{user.skills}}</p>
 						<button id='edit' class="round">Edit <i class="icon-edit"></i></button>
 				</div>
-				<div class="editUser one half double-padded">
+				<div class="editUser one half">
 					<h2>Edit Your Account Details</h2>
 						<form method="post" action="/{{user.id}}?_method=PUT">
 							<fieldset class="center">
@@ -60,7 +60,7 @@
 						</fieldset>
 					</form>
 				</div>
-				<div class="one half double-padded">
+				<div class="one half">
 					<h2>My Cliques:</h2>
 						<div class="row">
 							<img src="images/clique-rings.png" width="250px">
