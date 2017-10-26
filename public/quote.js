@@ -14,7 +14,6 @@ fetch('http://quotes.rest/quote/random.json', myInit)
   .then((response) => {
     return response.json()
       .then((quoteFromSite) => {
-        console.log(quoteFromSite);
 
         var quoteRandom = quoteFromSite.contents.quote;
         var quoteAuthor = quoteFromSite.contents.author;
