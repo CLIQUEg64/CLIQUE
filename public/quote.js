@@ -12,13 +12,14 @@ var myInit = {
 
 fetch('http://quotes.rest/quote/random.json', myInit)
   .then((response) => {
-      return response.json()
-        .then((quoteFromSite) => {
-          console.log(quoteFromSite);
+    return response.json()
+      .then((quoteFromSite) => {
+        console.log(quoteFromSite);
 
-          var quoteRandom = quoteFromSite.contents.quote;
-          var quoteAuthor = quoteFromSite.contents.author;
+        var quoteRandom = quoteFromSite.contents.quote;
+        var quoteAuthor = quoteFromSite.contents.author;
 
-          document.getElementsByTagName('P')[0].innerHTML = '"' + quoteRandom + '"';
-          document.getElementsByTagName('H4')[0].innerHTML = quoteAuthor;
-        })
+        document.getElementsByTagName('P')[0].innerHTML = '"' + quoteRandom + '"';
+        document.getElementsByTagName('H4')[0].innerHTML = quoteAuthor;
+      })
+  })
