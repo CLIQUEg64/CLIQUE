@@ -31,8 +31,11 @@ function getUsers() {
 }
 
 function getContacts(users){
-		return db.select('*').from('contacts')
-
+	for (var i = 0; i < users.length; i++) {
+		console.log(users[i])
+		console.log(db.select('*').from('contacts').where('user_id', users[1].id))
+		return db.select().from('contacts')
+	}
 }
 
 function removeUser(id){
