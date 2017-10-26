@@ -61,7 +61,7 @@ ul, li {
 }
 
 .editUser {
-  display:none;
+  display: none;
 }
 
 @media only screen and (max-width: 767px) {
@@ -79,7 +79,7 @@ ul, li {
 
 fieldset {
   background-color: #999 !important;
-  width: 51vh !important;
+  width: 49vh !important;
   border: #ccc !important;
 }
 
