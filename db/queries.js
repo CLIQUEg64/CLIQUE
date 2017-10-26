@@ -23,7 +23,7 @@ function generateRandomString() {
 
 function update(id, user) {
 	// Update a user where email matches user email
-	return db.table('users').update(user).where('id', id);
+	return db.table('users').update(user).where('id', id).returning(['id','name', 'email','company','position', 'skills','code']);
 }
 
 function getUsers() {
@@ -33,7 +33,6 @@ function getUsers() {
 function getContacts(){
   return  db.select('*').from('contacts').returning(['name','company','position','skills','dateMet','familiarity','notes','linkedinURL','email','user_id'])
 }
-
 
 
 
