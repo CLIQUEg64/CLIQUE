@@ -75,7 +75,7 @@ app.post('/homepage', (req, res) => {
 });
 
 app.put('/:id', (req, res, next) => {
-  console.log('Hello');
+  // console.log('Hello');
 	const id = req.params.id;
 	queries.update(id, req.body)
   // .then(() => res.sendStatus(200))
@@ -87,6 +87,15 @@ app.put('/:id', (req, res, next) => {
 		.catch(err => next(err));
 });
 
+
+app.delete('/:id', (req, res, next) => {
+  console.log('hello');
+  const id = req.params.id;
+  queries.removeUser(id)
+    .then(user => { console.log(user)
+    res.redirect('/')
+})
+})
 
 app.listen(port, () => {
   console.log(`listening at ${port}`);
