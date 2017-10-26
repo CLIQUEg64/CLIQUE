@@ -32,22 +32,22 @@ app.get('/webdev', (req, res) => {
       // console.log(users)
 			queries.getContacts(users)
 				.then(contacts => {
-					// console.log((contacts));
+					// console.log(users);
       res.render('webdev', { users: users, contacts:contacts
 			})
       })
     })
 })
 
-app.get('/contacts', (req, res) => {
-  queries.getContacts()
-    .then(contacts => {
-      console.log(contacts)
-      res.render('webdev', {
-        contacts: contacts
-      })
-    })
-})
+// app.get('/contacts', (req, res) => {
+//   queries.getContacts()
+//     .then(contacts => {
+//       console.log(contacts)
+//       res.render('webdev', {
+//         contacts: contacts
+//       })
+//     })
+// })
 
 app.post('/', (req, res) => {
   queries.login(req.body.code)
