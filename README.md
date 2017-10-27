@@ -1,6 +1,6 @@
 # CLIQUE
 - See deployed site [here.](https://ourclique.herokuapp.com/)
-- [Youtube walk through](###)
+- [Youtube walk through](https://www.youtube.com/watch?v=mWgacW8MMJk&feature=youtu.be)
 
 ## CONTRIBUTORS
 - Landon Shields
