@@ -41,26 +41,14 @@ app.get('/webdev', (req, res) => {
     })
 })
 
-// app.get('/contacts', (req, res) => {
-//   queries.getContacts()
-//     .then(contacts => {
-//       console.log(contacts)
-//       res.render('webdev', {
-//         contacts: contacts
-//       })
-//     })
-// })
-
 app.post('/', (req, res) => {
   queries.login(req.body.code)
     .then(user => {
       res.render('homepage', {
         user: user[0]
       })
-      // console.log({user: user[0]});
     })
 })
-
 
 app.post('/homepage', (req, res) => {
   console.log(req.body);
@@ -80,9 +68,6 @@ app.put('/:id', (req, res, next) => {
   console.log('Hello');
   const id = req.params.id;
   queries.update(id, req.body)
-    // .then(() => res.sendStatus(200))
-    // 	.catch(err => next(err))
-    // })
     .then(user => {
       console.log(user)
       res.render('homepage', {
